@@ -30,7 +30,7 @@ warnings.filterwarnings('ignore')
 
 
 class TSLAForecaster:
-    def __init__(self, data_path, models_dir='../models', cutoff_date='2024-01-01'):
+    def __init__(self, data_path, models_dir='../data/models', cutoff_date='2024-01-01'):
         self.data_path = data_path
         self.models_dir = models_dir
         os.makedirs(self.models_dir, exist_ok=True)
