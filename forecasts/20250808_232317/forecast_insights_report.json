@@ -1,0 +1,148 @@
+{
+    "forecast_period": "12 months",
+    "analysis_date": "2025-08-08 23:24:08",
+    "models_analyzed": [
+        "LSTM",
+        "ARIMA",
+        "SARIMA"
+    ],
+    "trend_analysis": {
+        "LSTM": {
+            "initial_price": "319.37286",
+            "final_price": "329.27075",
+            "total_return_pct": "3.0991638",
+            "trend_direction": "Moderate Upward",
+            "monthly_returns": [
+                "1.4298996",
+                "0.79403836",
+                "0.4132482",
+                "0.21366704",
+                "0.11014918",
+                "0.0566794",
+                "0.02915356",
+                "0.014961873"
+            ],
+            "avg_monthly_return": "0.38272464",
+            "forecast_volatility": 0.002736440643528668,
+            "avg_ci_width": 47.859010719854915,
+            "ci_width_trend": 0.004154207415363449,
+            "confidence_degradation": "True"
+        },
+        "ARIMA": {
+            "initial_price": 248.48865879940894,
+            "final_price": 248.48542366306148,
+            "total_return_pct": -0.0013019251514684365,
+            "trend_direction": "Stable",
+            "monthly_returns": [
+                -0.0013019249158148327,
+                -2.356566718324902e-10,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "avg_monthly_return": -0.00016274064393393808,
+            "forecast_volatility": 2.5712279011238356e-05,
+            "avg_ci_width": 241.59520679020767,
+            "ci_width_trend": 1.1193745550301373,
+            "confidence_degradation": "True"
+        },
+        "SARIMA": {
+            "initial_price": 248.65955261859287,
+            "final_price": 276.1915469559434,
+            "total_return_pct": 11.072164349776887,
+            "trend_direction": "Strong Upward",
+            "monthly_returns": [
+                1.3019231433088938,
+                1.2830935387197346,
+                1.2668388119395437,
+                1.250990775264718,
+                1.2355343544651327,
+                1.2204552110517286,
+                1.2057396980748547,
+                1.1913748189301465
+            ],
+            "avg_monthly_return": 1.2444937939693443,
+            "forecast_volatility": 0.006594303687553728,
+            "avg_ci_width": 250.41704883532714,
+            "ci_width_trend": 1.2052229010197424,
+            "confidence_degradation": "True"
+        }
+    },
+    "risk_assessment": {
+        "LSTM": {
+            "risk_level": "Low",
+            "opportunity_level": "Low",
+            "max_drawdown_pct": -0.04012341845027476,
+            "var_95": "3.1888485e-06",
+            "upside_potential_pct": 10.633586185453575,
+            "downside_risk_pct": -7.345128657251625,
+            "volatility_risk": 0.002736440643528668,
+            "confidence_uncertainty": "True"
+        },
+        "ARIMA": {
+            "risk_level": "Low",
+            "opportunity_level": "Negative",
+            "max_drawdown_pct": -0.0020778933555834255,
+            "var_95": -4.333386427468611e-11,
+            "upside_potential_pct": 72.70417232009268,
+            "downside_risk_pct": -72.70677617039563,
+            "volatility_risk": 2.5712279011238356e-05,
+            "confidence_uncertainty": "True"
+        },
+        "SARIMA": {
+            "risk_level": "Low",
+            "opportunity_level": "High",
+            "max_drawdown_pct": -0.013375453217663303,
+            "var_95": -0.00010646453885038154,
+            "upside_potential_pct": 88.04944336285547,
+            "downside_risk_pct": -65.9051146633017,
+            "volatility_risk": 0.006594303687553728,
+            "confidence_uncertainty": "True"
+        }
+    },
+    "key_insights": [
+        "Consensus Trend: Moderate Upward across 3 models",
+        "Average Expected Return: 4.7% over 12 months",
+        "Moderate Volatility Expected: 0.00 annualized volatility",
+        "Uncertainty Increases: 3 models show degrading confidence over time"
+    ],
+    "market_opportunities": [
+        {
+            "model": "SARIMA",
+            "opportunity": "Strong upside potential: 11.1% expected return",
+            "confidence": "Medium"
+        }
+    ],
+    "risk_factors": [
+        {
+            "model": "LSTM",
+            "risk": "Forecast uncertainty increases over time",
+            "severity": "Medium"
+        },
+        {
+            "model": "ARIMA",
+            "risk": "Forecast uncertainty increases over time",
+            "severity": "Medium"
+        },
+        {
+            "model": "SARIMA",
+            "risk": "Forecast uncertainty increases over time",
+            "severity": "Medium"
+        }
+    ],
+    "recommendations": [
+        {
+            "type": "Investment",
+            "recommendation": "Consider long position given majority of models predict positive returns",
+            "confidence": "Medium"
+        },
+        {
+            "type": "Monitoring",
+            "recommendation": "Monitor forecasts monthly and adjust positions based on model convergence",
+            "confidence": "Medium"
+        }
+    ]
+}
