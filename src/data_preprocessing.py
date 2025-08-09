@@ -176,38 +176,3 @@ class FinancialDataPreprocessor:
             df.to_csv(output_path)
             print(f"✓ Saved: {output_path}")
 
-
-def main():
-    # Load data
-    loader = FinancialDataLoader()
-    loader.load_data_from_csv('../data/raw')  # your CSV folder path
-
-    # Preprocess
-    preprocessor = FinancialDataPreprocessor(loader)
-    preprocessor.clean_data()
-
-    # Summary stats
-    print("\nSummary Statistics:")
-    print(preprocessor.create_summary_statistics().round(2))
-
-    # Returns + Stationarity
-    returns_df = preprocessor.calculate_returns()
-    print("\nStationarity Tests:")
-    for symbol in returns_df.columns:
-        preprocessor.perform_stationarity_test(returns_df[symbol], symbol)
-
-    # Risk metrics
-    print("\nRisk Metrics:")
-    print(preprocessor.calculate_risk_metrics().round(4))
-
-    # EDA Plots
-    print("\nGenerating plots...")
-    preprocessor.plot_price_trends()
-    preprocessor.plot_returns_distribution()
-    preprocessor.plot_volatility_trends()
-
-    # Save cleaned data to ../data/cleaned
-    preprocessor.save_clean_data()
-
-if __name__ == "__main__":
-    main()
