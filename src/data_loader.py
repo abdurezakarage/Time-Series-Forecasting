@@ -84,29 +84,3 @@ class FinancialDataLoader:
                 volume_data[symbol] = data['Volume']
         return pd.DataFrame(volume_data)
 
-def main():
-    """Main function to demonstrate data loading and saving."""
-    loader = FinancialDataLoader()
-    data = loader.fetch_data()
-    
-    print("\n" + "="*50)
-    print("DATA SUMMARY")
-    print("="*50)
-    
-    for symbol, df in data.items():
-        print(f"\n{symbol}:")
-        print(f"  Shape: {df.shape}")
-        print(f"  Columns: {list(df.columns)}")
-        print(f"  Date range: {df.index.min().date()} to {df.index.max().date()}")
-        print(f"  Missing values: {df.isnull().sum().sum()}")
-        
-        if 'Close' in df.columns:
-            print(f"  Close price range: ${df['Close'].min():.2f} - ${df['Close'].max():.2f}")
-    
-    # Save fetched data to CSV files
-    loader.save_data_to_csv(directory='data')
-    
-    return loader
-
-if __name__ == "__main__":
-    main()
