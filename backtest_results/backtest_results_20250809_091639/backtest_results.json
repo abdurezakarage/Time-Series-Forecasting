@@ -1,0 +1,48 @@
+{
+  "backtest_period": {
+    "start_date": "2024-07-30",
+    "end_date": "2025-07-30",
+    "total_days": 250
+  },
+  "strategy_weights": {
+    "TSLA": 0.0,
+    "BND": 3.91353616e-15,
+    "SPY": 1.0
+  },
+  "benchmark_weights": {
+    "SPY": 0.6,
+    "BND": 0.4,
+    "TSLA": 0.0
+  },
+  "initial_investment": 10000,
+  "strategy_metrics": {
+    "total_return": 0.16621405489141594,
+    "annualized_return": 0.16764949890446523,
+    "volatility": 0.20276575430300425,
+    "sharpe_ratio": 0.8461736921518367,
+    "max_drawdown": -0.1875523597774734,
+    "win_rate": 0.588,
+    "var_95": -0.01764706119405455,
+    "positive_days": "147",
+    "negative_days": "103",
+    "total_days": 250
+  },
+  "benchmark_metrics": {
+    "total_return": 0.1168052385353664,
+    "annualized_return": 0.11779268176117252,
+    "volatility": 0.1247377245764771,
+    "sharpe_ratio": 0.8902713990461729,
+    "max_drawdown": -0.11288784003670257,
+    "win_rate": 0.576,
+    "var_95": -0.01082748705812192,
+    "positive_days": "144",
+    "negative_days": "106",
+    "total_days": 250
+  },
+  "performance_comparison": {
+    "return_difference": 0.049408816356049545,
+    "sharpe_difference": -0.04409770689433623,
+    "volatility_difference": 0.07802802972652716,
+    "max_drawdown_difference": -0.07466451974077082
+  }
+}
